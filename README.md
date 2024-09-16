@@ -23,6 +23,12 @@ Facilitar la toma de decisiones en cuanto a la planificación de horarios, asign
 
 Mejorar la productividad y puntualidad del personal al ofrecer una plataforma digital que permita un control riguroso de las horas trabajadas, incentivando la eficiencia y el cumplimiento de horarios.
 
+-----
+### Objetivo especifico
+
+Desarrollar una aplicación capaz de cumplir con los requerimientos definidos por el equipo técnico en pro de lograr los objetivos generales, dicha aplicación tendrá lugar dentro del entorno de JAVA, tanto la interfaz gráfica como todas las funcionalidades internas del sistema, adicionalmente tendremos persistencia de datos gracias a una base de datos relacional proporcionada por otro equipo especializado, teniendo como requerimiento principal documentar detalladamente los procesos que se lleven a cabo para lograr la conclusión del proyecto. 
+
+
 ## Referencias
 
 Ministerio del Trabajo de Colombia. (2017). Leyes y Decretos-Ley. 
