@@ -34,10 +34,10 @@ Desarrollar una aplicación capaz de cumplir con los requerimientos definidos po
 Ministerio del Trabajo de Colombia. (2017). Leyes y Decretos-Ley. 
 Recuperado de https://www.mintrabajo.gov.co/normatividad/leyes-y-decretos-ley/leyes
 
-Sistema Integral de Información SISPRO
+Sistema Integral de Información SISPRO.
 https://www.minsalud.gov.co/proteccionsocial/Paginas/SistemaIntegraldeInformaci%C3%B3nSISPRO.aspx#:~:text=El%20Sistema%20Integral%20de%20Informaci%C3%B3n,y%20en%20los%20procesos%20esenciales
 
-Código Sustantivo del Trabajo
+Código Sustantivo del Trabajo.
 https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=33104
 
 
