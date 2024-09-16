@@ -13,3 +13,8 @@ Facilitar la toma de decisiones en cuanto a la planificación de horarios, asign
 
 Mejorar la productividad y puntualidad del personal al ofrecer una plataforma digital que permita un control riguroso de las horas trabajadas, incentivando la eficiencia y el cumplimiento de horarios.
 
+## Referencias
+
+Ministerio del Trabajo de Colombia. (2017). Leyes y Decretos-Ley. 
+Recuperado de https://www.mintrabajo.gov.co/normatividad/leyes-y-decretos-ley/leyes
+
