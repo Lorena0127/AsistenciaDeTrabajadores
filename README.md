@@ -2,9 +2,9 @@
 
 ## Divicion del trabajo 
 Diana Lorena Salinas Ortegón: Planteamiento del problema y Justificación. 
--------
+
 Juan Diego Garzón Becerra: Objetivo especifico. 
--------
+
 Danna Sofia Rojas Flórez: Objetivos y organizacion de las referencias.
 
 ## Planteamiento del problema
