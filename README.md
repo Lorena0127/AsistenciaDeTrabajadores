@@ -5,7 +5,7 @@ Diana Lorena Salinas Ortegón: Planteamiento del problema y Justificación.
 
 Juan Diego Garzón Becerra: Objetivo especifico. 
 
-Danna Sofia Rojas Flórez: Objetivos y organizacion de las referencias.
+Danna Sofia Rojas Flórez: Objetivos.
 
 ## Planteamiento del problema
 En muchas organizaciones y empresas, la gestión de las novedades y el registro de la asistencia de trabajadores, contratistas y otros visitantes a las oficinas no se realiza de manera organizada. La falta de un control registrado y actualizado sobre estos aspectos puede llevar a problemas significativos, como el incumplimiento de horarios, dificultades en la gestión de permisos, y falta de control sobre el ingreso y salida de equipos externos.
