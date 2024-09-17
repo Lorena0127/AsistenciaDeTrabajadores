@@ -1,5 +1,12 @@
 # AsistenciaDeTrabajadores
 
+## Divicion del trabajo 
+Diana Lorena Salinas Ortegón: Planteamiento del problema y Justificación. 
+-------
+Juan Diego Garzón Becerra: Objetivo especifico. 
+-------
+Danna Sofia Rojas Flórez: Objetivos y organizacion de las referencias.
+
 ## Planteamiento del problema
 En muchas organizaciones y empresas, la gestión de las novedades y el registro de la asistencia de trabajadores, contratistas y otros visitantes a las oficinas no se realiza de manera organizada. La falta de un control registrado y actualizado sobre estos aspectos puede llevar a problemas significativos, como el incumplimiento de horarios, dificultades en la gestión de permisos, y falta de control sobre el ingreso y salida de equipos externos.
 Actualmente, muchos sistemas, como los formatos en Excel, minutas, Access, etc., son inadecuados para manejar el registro de asistencia durante los picos de actividad laboral o para revisar si se llegara a presentar incumplimiento o la falta de elementos. Estos métodos pueden resultar en retrasos en la entrada de datos, errores en el registro, y en general, una carga administrativa considerable. Estos problemas se agravan especialmente en horarios de alta demanda, lo que afecta negativamente la precisión del registro y la eficiencia del proceso.
