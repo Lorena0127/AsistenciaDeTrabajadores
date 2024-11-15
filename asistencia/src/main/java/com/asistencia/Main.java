@@ -1,25 +1,36 @@
 package com.asistencia;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
+import java.util.Scanner;
 
+import org.json.JSONObject;
 
 public class Main {
     public static void main(String[] args) {
         Api api = new Api();
+        String[] genders = { "female", "male" };
         try {
-            JSONObject response = api.apiConnect();
-            JSONArray resultsArray = response.getJSONArray("results");
-            JSONObject resultsJson = resultsArray.getJSONObject(0);
-            JSONObject pictures = resultsJson.getJSONObject("picture");
-            String largePicture = pictures.getString("large");
-            // User newUser = new User(null, null, null, null, null, null, null, null, null,
-            // null, 0)
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Ingrese los siguientes datos:");
+            System.out.print("Name: ");
+            String name = scanner.nextLine();
+            System.out.print("Username: ");
+            String username = scanner.nextLine();
+            System.out.print("Password: ");
+            String password = scanner.nextLine();
+            System.out.print("Type a number (1.Female / 2.Male): ");
+            int indexGender = Integer.valueOf(scanner.nextLine());
+            scanner.close();
 
-            System.out.println(largePicture);
+            String gender = genders[indexGender - 1];
 
+            JSONObject response = api.apiConnect(gender);
+            User newUser = api.createUserFromResponse(response);
+            newUser.setName(name);
+            newUser.setUsername(username);
+            newUser.setPassword(password);
+
+            newUser.getAll();
         } catch (Exception e) {
-            // Manejo de errores
             System.err.println("Error al conectar con la API: " + e.getMessage());
         }
     }
