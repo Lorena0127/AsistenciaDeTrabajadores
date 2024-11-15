@@ -6,6 +6,7 @@ CREATE TABLE asistencia.users (
     id VARCHAR(255) NOT NULL PRIMARY KEY, -- Primary Key
     name VARCHAR(255),
     username VARCHAR(255) UNIQUE,
+    password VARCHAR(255),
     role VARCHAR(255),
     avatar VARCHAR(255),
     gender VARCHAR(255),
