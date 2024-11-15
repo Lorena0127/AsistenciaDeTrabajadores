@@ -29,7 +29,10 @@ public class Main {
             newUser.setUsername(username);
             newUser.setPassword(password);
 
-            newUser.getAll();
+            // newUser.getAll();
+
+            DB database = new DB();
+            database.createUserRow(newUser);
         } catch (Exception e) {
             System.err.println("Error al conectar con la API: " + e.getMessage());
         }
