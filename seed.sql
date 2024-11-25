@@ -1,9 +1,6 @@
-create database asistencia;
 
-
-
-CREATE TABLE asistencia.users (
-    id VARCHAR(255) NOT NULL PRIMARY KEY, -- Primary Key
+CREATE TABLE IF NOT EXISTS  asistencia.users (
+    id VARCHAR(255) NOT NULL PRIMARY KEY,
     name VARCHAR(255),
     username VARCHAR(255) UNIQUE,
     password VARCHAR(255),
