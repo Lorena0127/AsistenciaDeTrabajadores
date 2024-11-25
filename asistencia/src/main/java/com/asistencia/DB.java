@@ -5,9 +5,9 @@ import java.sql.*;
 public class DB {
 
     public void createUserRow(User newUser) {
-        String url = "jdbc:mysql://localhost:3306/asistencia";
+        String url = "jdbc:mysql://localhost:3308/asistencia";
         String usuario = "root";
-        String contraseña = "root1234";
+        String contraseña = "123456";
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
