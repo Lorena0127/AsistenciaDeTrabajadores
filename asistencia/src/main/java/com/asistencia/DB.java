@@ -5,7 +5,7 @@ import java.sql.*;
 public class DB {
 
     public void createUserRow(User newUser) {
-        String url = "jdbc:mysql://localhost:3308/asistencia";
+        String url = "jdbc:mysql://db:3306/asistencia";
         String usuario = "root";
         String contraseña = "123456";
 
