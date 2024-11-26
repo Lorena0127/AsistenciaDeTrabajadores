@@ -13,11 +13,3 @@ services:
       - 3308:3306
     volumes:
       - ./seed.sql:/docker-entrypoint-initdb.d/seed.sql
-
-  java-app:
-    build:
-      context: .
-    container_name: java-console-app
-    image: java-console-app:latest
-    stdin_open: true 
-    tty: true
