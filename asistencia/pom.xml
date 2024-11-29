@@ -39,7 +39,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.example.Main</mainClass> <!-- Cambia esto a tu clase principal -->
+                            <mainClass>model.Main</mainClass> <!-- Cambia esto a tu clase principal -->
                         </manifest>
                     </archive>
                 </configuration>

@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 
 public class DB {
 
-    private final String url = "jdbc:mysql://192.168.0.153:3306/asistencia";
-    private final String usuario = "root";
-    private final String contraseña = "123456";
+    private final String url = "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10748427";
+    private final String usuario = "sql10748427";
+    private final String contraseña = "SpJbiMYyqh";
 
     public Connection DBconnect() {
         try {
