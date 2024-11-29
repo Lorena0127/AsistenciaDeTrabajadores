@@ -3,6 +3,7 @@ package services;
 import entities.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UserServices {
@@ -35,6 +36,37 @@ public class UserServices {
         } catch (SQLException e) {
             return "Username alredy exist";
         }
+        return null;
+
+    }
+
+    public String Login(String username, String password) {
+
+        try {
+            String query = "SELECT * FROM users WHERE username = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, username);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            
+            System.out.println(resultSet);
+            while (resultSet.next()) {
+                System.out.println("Nombre: " + resultSet.getString("name"));            
+                
+            }
+            if (resultSet.last()) {
+                System.out.println("Existe");
+            }else{
+                System.err.println("No existe");
+            }
+            while (resultSet.next()) {
+                System.out.println("ID: " + resultSet.getString("id"));
+                System.out.println("Nombre: " + resultSet.getString("name"));
+            }
+
+        } catch (SQLException e) {
+
+        }
+
         return null;
 
     }

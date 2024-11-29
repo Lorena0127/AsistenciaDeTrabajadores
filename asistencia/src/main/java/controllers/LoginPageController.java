@@ -1,22 +1,20 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package controllers;
 
-import entities.User;
-import javax.swing.JOptionPane;
-import org.json.JSONObject;
-import services.ApiServices;
 import services.UserServices;
 
+/**
+ *
+ * @author Guest
+ */
 public class LoginPageController {
 
-    private final ApiServices api = new ApiServices();
-
-    public void SignUp(String name, String username, String gender, String password) {
-        JSONObject apiData = api.GetApiData(gender);
-        User newUser = new User(name, username, password, apiData, gender);
+    public void Login(String username , String password) {
         UserServices userServices = new UserServices();
-        String message = userServices.Create(newUser);
-        JOptionPane.showMessageDialog(null, message ,"Message", 1);
-
+        userServices.Login(username, password);
     }
 
 }
