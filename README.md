@@ -1,4 +1,5 @@
 # AsistenciaDeTrabajadores
+
 ## Como funciona el proyecto:
 
 ### Requisitos:
@@ -8,6 +9,12 @@
 3. GIT instalado para clonar repo.
 
 ### Pasos para ejecutar:
+
+<a href="./asistencia/target/asistencia-1.jar" download>
+    <button style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; font-size: 16px; border-radius: 5px; cursor: pointer;">
+        Descargar Programa
+    </button>
+</a>
 
 1.  Clonar repositorio en maquina local y abrir directorio.
 
