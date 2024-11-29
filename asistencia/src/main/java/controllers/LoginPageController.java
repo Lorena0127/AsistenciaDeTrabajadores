@@ -1,6 +1,7 @@
 package controllers;
 
 import entities.User;
+import javax.swing.JOptionPane;
 import org.json.JSONObject;
 import services.ApiServices;
 import services.UserServices;
@@ -13,7 +14,8 @@ public class LoginPageController {
         JSONObject apiData = api.GetApiData(gender);
         User newUser = new User(name, username, password, apiData, gender);
         UserServices userServices = new UserServices();
-        userServices.Create(newUser);
+        String message = userServices.Create(newUser);
+        JOptionPane.showMessageDialog(null, message ,"Message", 1);
 
     }
 

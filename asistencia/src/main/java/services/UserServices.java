@@ -3,17 +3,16 @@ package services;
 import entities.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class UserServices {
 
-    private DB db = new DB();
-    private Connection connection = db.DBconnect();
+    private final DB db = new DB();
+    private final Connection connection = db.DBconnect();
 
-    public void Create(User newUser) {
+    public String Create(User newUser) {
         try {
-
             String query = "INSERT INTO users (id, name, username, password, role, avatar, gender, city, state, country, age) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
             PreparedStatement preparedStatement = connection.prepareStatement(query);
 
             preparedStatement.setString(1, newUser.getId());
@@ -30,13 +29,13 @@ public class UserServices {
 
             int rowsInserted = preparedStatement.executeUpdate();
             if (rowsInserted > 0) {
-                System.out.println("Usuario insertado correctamente");
+                return "Usuario insertado correctamente";
             }
 
-        } catch (Exception e) {
-            System.err.println("Error creating user");
-            e.printStackTrace();
+        } catch (SQLException e) {
+            return "Username alredy exist";
         }
+        return null;
 
     }
 
