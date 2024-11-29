@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 public class ApiServices {
 
-    public JSONObject apiConnect(String gender) throws IOException {
+    public JSONObject GetApiData(String gender) {
         try {
             URL url = new URL("https://randomuser.me/api/?gender=" + gender);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -28,8 +28,9 @@ public class ApiServices {
 
         } catch (IOException e) {
             System.err.println("Error al conectar con la API: " + e.getMessage());
-            throw e;
+
         }
+        return null;
     }
 
 }
