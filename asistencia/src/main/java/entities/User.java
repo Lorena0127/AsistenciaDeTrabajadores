@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package entities;
 
 import org.json.*;
@@ -21,14 +17,14 @@ public class User {
     private String country;
     private int age;
 
-    public User(String name, String username, String password, JSONObject response) {
+    public User(String name, String username, String password, JSONObject apiData, String gender) {
 
-        JSONArray resultsArray = response.getJSONArray("results");
+        JSONArray resultsArray = apiData.getJSONArray("results");
         JSONObject resultsJson = resultsArray.getJSONObject(0);
         JSONObject pictures = resultsJson.getJSONObject("picture");
         JSONObject location = resultsJson.getJSONObject("location");
         JSONObject dob = resultsJson.getJSONObject("dob");
-        JSONObject info = response.getJSONObject("info");
+        JSONObject info = apiData.getJSONObject("info");
 
         String city = location.getString("city");
         String state = location.getString("state");
@@ -41,7 +37,7 @@ public class User {
         this.id = id;
         this.name = name;
         this.username = username;
-        this.password = password;
+        this.password = BCrypt.hashpw(password, BCrypt.gensalt());
         this.role = role;
         this.avatar = avatar;
         this.gender = gender;
@@ -119,11 +115,6 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public void setPassword(String password) {
-        String hashedPass = BCrypt.hashpw(password, BCrypt.gensalt());
-        this.password = hashedPass;
     }
 
     public void setRole(String role) {

@@ -153,8 +153,10 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordActionPerformed
 
     private void testActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testActionPerformed
-        
+
         LoginPageController controller = new LoginPageController();
+        System.out.println(name.getText() + username.getText()+ gender.getSelectedItem().toString()+ password.getText());
+        controller.SignUp(name.getText(), username.getText(), gender.getSelectedItem().toString(), password.getPassword().toString());
     }//GEN-LAST:event_testActionPerformed
 
     /**

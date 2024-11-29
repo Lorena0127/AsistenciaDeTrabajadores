@@ -1,5 +1,6 @@
 package model;
 
+import services.DB;
 import views.Login;
 
 public class Main {
