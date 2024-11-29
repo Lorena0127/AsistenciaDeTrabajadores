@@ -3,17 +3,17 @@ package services;
 import entities.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class UserServices {
 
-    private DB db = new DB();
-    private Connection connection = db.DBconnect();
+    private final DB db = new DB();
+    private final Connection connection = db.DBconnect();
 
-    public void Create(User newUser) {
+    public String Create(User newUser) {
         try {
-
             String query = "INSERT INTO users (id, name, username, password, role, avatar, gender, city, state, country, age) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
             PreparedStatement preparedStatement = connection.prepareStatement(query);
 
             preparedStatement.setString(1, newUser.getId());
@@ -30,13 +30,44 @@ public class UserServices {
 
             int rowsInserted = preparedStatement.executeUpdate();
             if (rowsInserted > 0) {
-                System.out.println("Usuario insertado correctamente");
+                return "Usuario insertado correctamente";
             }
 
-        } catch (Exception e) {
-            System.err.println("Error creating user");
-            e.printStackTrace();
+        } catch (SQLException e) {
+            return "Username alredy exist";
         }
+        return null;
+
+    }
+
+    public String Login(String username, String password) {
+
+        try {
+            String query = "SELECT * FROM users WHERE username = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, username);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            
+            System.out.println(resultSet);
+            while (resultSet.next()) {
+                System.out.println("Nombre: " + resultSet.getString("name"));            
+                
+            }
+            if (resultSet.last()) {
+                System.out.println("Existe");
+            }else{
+                System.err.println("No existe");
+            }
+            while (resultSet.next()) {
+                System.out.println("ID: " + resultSet.getString("id"));
+                System.out.println("Nombre: " + resultSet.getString("name"));
+            }
+
+        } catch (SQLException e) {
+
+        }
+
+        return null;
 
     }
 
