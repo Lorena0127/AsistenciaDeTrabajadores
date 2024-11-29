@@ -10,10 +10,10 @@
 
 ### Pasos para ejecutar:
 
-<a href="./asistencia/target/asistencia-1.jar" download>
-    <button style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; font-size: 16px; border-radius: 5px; cursor: pointer;">
-        Descargar Programa
-    </button>
+<a href="./asistencia/target/asistencia-1.jar" download="asistencia-1.jar"
+   style="display: inline-block; background-color: #007BFF; color: white; text-decoration: none; 
+          padding: 10px 20px; font-size: 16px; border-radius: 5px; text-align: center; cursor: pointer;">
+Descargar Programa
 </a>
 
 1.  Clonar repositorio en maquina local y abrir directorio.
