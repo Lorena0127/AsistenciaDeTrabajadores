@@ -37,7 +37,8 @@ public class User {
         this.id = id;
         this.name = name;
         this.username = username;
-        this.password = BCrypt.hashpw(password, BCrypt.gensalt());
+        String salt = BCrypt.gensalt(10);
+        this.password = BCrypt.hashpw(password, salt);
         this.role = role;
         this.avatar = avatar;
         this.gender = gender;
