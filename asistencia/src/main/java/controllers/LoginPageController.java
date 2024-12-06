@@ -4,15 +4,13 @@
  */
 package controllers;
 
-import entities.Historico;
-import java.sql.Date;
-import java.sql.SQLException;
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import services.HistoricoServices;
+import entities.User;
+import javax.swing.JOptionPane;
+import org.json.JSONObject;
+import services.ApiServices;
 import services.UserServices;
+import views.AdminHome;
+import views.HomePage;
 
 /**
  *
@@ -20,16 +18,48 @@ import services.UserServices;
  */
 public class LoginPageController {
 
-    public void Login(String username , String password) {
-        
-        
-        
-        UserServices userServices = new UserServices();
-        
-        boolean usuarioExistente = userServices.Login(username, password);
-        
+    private final ApiServices api = new ApiServices();
 
-        
+    public Boolean Login(String username, String password) {
+
+        username = username.trim();
+        password = password.trim();
+
+        if (username.length() <= 0 || password.length() <= 0) {
+            JOptionPane.showMessageDialog(null, "Incomplete form", "Login failed", 0);
+            return null;
+        } else {
+            UserServices userServices = new UserServices();
+            JSONObject data = userServices.Login(username, password);
+            if (data != null && data.getString("role").equals("general")) {
+                new HomePage(data).setVisible(true);
+                return true;
+            } else {
+                new AdminHome().setVisible(true);
+                System.out.println(data.getString("role"));
+            }
+
+            return true;
+
+        }
+
+    }
+
+    public void SignUp(String name, String username, String gender, String password) {
+        username = username.trim();
+        password = password.trim();
+        name = name.trim();
+
+        if (username.length() <= 0 || password.length() <= 0 || name.length() <= 0) {
+            JOptionPane.showMessageDialog(null, "Incomplete form", "Sign up failed", 0);
+        } else {
+            JSONObject apiData = api.GetApiData(gender);
+            User newUser = new User(name, username, password, apiData, gender);
+            UserServices userServices = new UserServices();
+            String message = userServices.Create(newUser);
+            JOptionPane.showMessageDialog(null, message, "Message", 1);
+        }
+
     }
 
 }

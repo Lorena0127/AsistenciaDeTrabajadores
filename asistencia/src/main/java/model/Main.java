@@ -9,6 +9,5 @@ public class Main {
         Login loginPage = new Login();
         loginPage.setVisible(true);
 
-        System.out.println("model.Main.main()");
     }
 }
