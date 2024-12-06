@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Asistencia de Trabajadores</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Estilos Generales */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fa;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    section {
+      margin: 20px;
+    }
+
+    h2,
+    h3 {
+      color: #007BFF;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .col {
+      flex: 1 1 calc(33.333% - 20px);
+      box-sizing: border-box;
+    }
+
+    .col-full {
+      flex: 1 1 100%;
+    }
+
+    .table-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-container table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table-container th,
+    .table-container td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .table-container th {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    /* Estilos Responsivos */
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column;
+      }
+
+      .col {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Asistencia de Trabajadores</h1>
+  </header>
+
+  <section class="content">
+    <h2>Requisitos:</h2>
+    <ul>
+      <li>Java instalado localmente.</li>
+      <li>Conexión a internet</li>
+    </ul>
+
+
+
+    <a href="./asistencia/target/asistencia-1.jar" download="asistencia-1.jar" class="button">Descargar Programa</a>
+
+    <h2>Consideraciones:</h2>
+    <ul>
+      <li>Si intentas agregar un username duplicado se lanzará un error.</li>
+      <li>Si escribes un número diferente a 1 o 2 en la sección de genero se lanzará un error, en próximas versiones
+        ambos errores tendrán su respectivo manejador de errores y validaciones.</li>
+    </ul>
+
+    <h2>Division del trabajo</h2>
+    <div class="row">
+      <div class="col">
+        <h3>Diana Lorena Salinas Ortegón</h3>
+        <p>Planteamiento del problema y Justificación.</p>
+      </div>
+      <div class="col">
+        <h3>Juan Diego Garzón Becerra</h3>
+        <p>Objetivo especifico.</p>
+      </div>
+      <div class="col">
+        <h3>Danna Sofia Rojas Flórez</h3>
+        <p>Objetivos.</p>
+      </div>
+    </div>
+
+    <h2>Planteamiento del problema</h2>
+    <p>En muchas organizaciones y empresas, la gestión de las novedades y el registro de la asistencia de
+      trabajadores...</p>
+
+    <h2>Justificación</h2>
+    <p>La falta de un sistema de control de asistencia eficiente y actualizado en las organizaciones y empresas...</p>
+
+    <h2>Objetivos</h2>
+    <ul>
+      <li>Aumentar la transparencia y confianza entre los empleados y la empresa...</li>
+      <li>Proteger los derechos laborales de los empleados...</li>
+      <li>Garantizar el cumplimiento de la legislación laboral colombiana...</li>
+      <li>Optimizar la gestión de recursos humanos...</li>
+      <li>Facilitar la toma de decisiones en cuanto a la planificación de horarios...</li>
+      <li>Mejorar la productividad y puntualidad del personal...</li>
+    </ul>
+
+    <h2>Objetivo especifico</h2>
+    <p>Desarrollar una aplicación capaz de cumplir con los requerimientos definidos por el equipo técnico...</p>
+
+    <h2>Referencias</h2>
+    <ul>
+      <li><a href="https://www.mintrabajo.gov.co/normatividad/leyes-y-decretos-ley/leyes" target="_blank">Ministerio del
+          Trabajo de Colombia. (2017). Leyes y Decretos-Ley.</a></li>
+      <li><a
+          href="https://www.minsalud.gov.co/proteccionsocial/Paginas/SistemaIntegraldeInformaci%C3%B3nSISPRO.aspx#:~:text=El%20Sistema%20Integral%20de%20Informaci%C3%B3n,y%20en%20los%20procesos%20esenciales"
+          target="_blank">Sistema Integral de Información SISPRO.</a></li>
+      <li><a href="https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=33104" target="_blank">Código Sustantivo
+          del Trabajo.</a></li>
+    </ul>
+  </section>
+
+</body>
+
+</html>
